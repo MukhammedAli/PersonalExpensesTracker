@@ -33,23 +33,25 @@ class MyHomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter app'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: <Widget>[
-          Container(
-            width: double.infinity,
-            child: Card(
-              elevation: 5,
-              color: Colors.blue,
-              child: Container(
-                width: double.infinity,
-                child: Text('CHART!'),
+      body: SingleChildScrollView(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              width: double.infinity,
+              child: Card(
+                elevation: 5,
+                color: Colors.blue,
+                child: Container(
+                  width: double.infinity,
+                  child: Text('CHART!'),
+                ),
               ),
             ),
-          ),
-          UserTransactions(),
-        ],
+            UserTransactions(),
+          ],
+        ),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
