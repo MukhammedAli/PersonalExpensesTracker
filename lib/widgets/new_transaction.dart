@@ -31,6 +31,7 @@ class NewTransaction extends StatelessWidget {
                 ),
                 controller: titleController,
                 onSubmitted: (_) => submitData(),
+
                 // onChanged: (val) {
                 //   titleInput = val;
                 // }
@@ -40,9 +41,9 @@ class NewTransaction extends StatelessWidget {
                   labelText: 'Amount',
                 ),
                 controller: amountController,
-                keyboardType: TextInputType.number,
                 onSubmitted: (_) => submitData(),
-
+                keyboardType: TextInputType.number,
+                //For IOS TextInputType.numberWithOptions(decimal:true);
                 //onChanged: (val) => amountInput = val,
               ),
               FlatButton(
