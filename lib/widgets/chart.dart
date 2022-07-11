@@ -28,7 +28,7 @@ class Chart extends StatelessWidget {
         'day': DateFormat.E().format(weekDay).substring(0, 1),
         'amount': totalSum
       };
-    });
+    }).reversed.toList();
   }
 
   double get totalSpending {
@@ -36,6 +36,16 @@ class Chart extends StatelessWidget {
       return sum + (item['amount'] as double);
     });
   }
+
+  // Widget getContainer(BuildContext context) {
+  //   return Container(
+  //     decoration: BoxDecoration(
+  //       color: Theme.of(context).primaryColor,
+  //       shape: BoxShape.circle,
+  //     ),
+  //     child: Text('Hello World');
+  //   );
+  // }
 
   @override
   Widget build(BuildContext context) {
